@@ -54,10 +54,12 @@ span{
   margin-bottom: 1rem;
 }
 
-@media(max-width: 1028px)
+@media(max-width: 400px)
 {
   h1{text-align: center;}
   .alone1{width: 200px}
+  .img-sec3left{display:  block}
+
 }
 
 
