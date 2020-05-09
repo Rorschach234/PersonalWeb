@@ -84,3 +84,10 @@ margin-bottom: 30px}
 .backgroundBlog{
   background-color: #f4f9f4;
 }
+
+@media(max-width: 400px)
+{
+  .content{
+    margin: 20px 25px 10px 25px;
+  }
+}
