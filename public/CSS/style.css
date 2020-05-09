@@ -10,6 +10,8 @@ h1{font-family: 'Pacifico', cursive;
 margin-bottom: 50px;
 font-size: 3rem;}
 
+
+
 #section2{background-color: #f4f9f4;
 text-align: center;
 padding: 10% 10%;}
@@ -32,20 +34,26 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 float: right;
 margin: 1rem;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+position: relative;
+display: inline-flex;
 }
-#section3 a{font-size: 1.5rem;
+.videolink a{font-size: 1.5rem;
 color: black;}
-#section3 a:link{text-decoration: none;}
-#section3 a:hover{color: white;
+.videolink a:link{text-decoration: none;}
+.videolink a:hover{color: white;
 }
 
 #section4{background-color: #5c8d89;
 text-align: center;
-color: white}
+color: white;
+position: relative;
+z-index: +1}
+
 
 
 .footer{padding: 1rem 1rem;
-font-family: 'Montserrat-light', sans-serif;}
+font-family: 'Montserrat-light', sans-serif;
+padding-top: 50px}
 
 p{
   margin: 0 auto 0 auto;
@@ -66,7 +74,13 @@ span{
 /*blogsection
 
 */
-
+.content{
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px
+}
+.content h2{text-align: center;
+margin-bottom: 30px}
 .backgroundBlog{
   background-color: #f4f9f4;
 }

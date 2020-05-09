@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -20,14 +20,24 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="/">Home</a>
-          <a class="nav-item nav-link" href="blog.html">Blog</a>
-          <a class="nav-item nav-link active" href="gallery.html">Gallery</a><span class="sr-only">(current)</span>
-
+          <a class="nav-item nav-link active" href="blog">Blog<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="gallery">Gallery</a>
         </div>
       </div>
     </nav>
 
 
-
   </body>
 </html>
+
+<section id=content>
+  <div class="content">
+    <h2><%= title %> </h2>
+  <p><%= content %></p>
+  </div>
+</section>
+
+
+
+
+<%- include("partials/footer"); -%>
