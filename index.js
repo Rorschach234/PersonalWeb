@@ -98,6 +98,22 @@ app.get("/compose", function(req, res) {
   res.render("compose");
 });
 
+app.post("/compose", function(req, res){
+
+  const titleNew = req.body.titleCompose;
+  const contentNew = req.body.contentCompose;
+  const post = new Post({
+    title: titleNew,
+    content: contentNew
+
+  });
+
+post.save();
+
+res.redirect("/blog");
+
+});
+
 //var topImage = $(".alone1");
 
 //topImage.animate({width: '500px', opacity: '0.8'}, "slow");
