@@ -57,6 +57,7 @@ padding-top: 50px}
 
 p{
   margin: 0 auto 0 auto;
+  font-family: serif;
 }
 span{
   margin-bottom: 1rem;
@@ -98,4 +99,9 @@ margin-bottom: 30px}
 
 .post{margin-top: 50px;
 margin-left: 200px;
-margin-right: 200px}
+margin-right: 200px
+}
+.test{
+white-space: pre-line;
+white-space: pre-wrap
+}

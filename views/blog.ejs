@@ -35,21 +35,22 @@
 
 <section id=content>
   <div class="content">
-<% titlePost.forEach(function(post){ %>
-    <h2><%= post.title %> </h2>
-    <% }) %>
+<% customPost.forEach(function(post){ %>
+  <h2><%= post.title%></p></h2>
+<p class ="test"><%=post.content %></p>
 
-    <% contentPost.forEach(function(post){ %>
-  <p><%=  post.content %></p>
-    <% }) %>
+
+  <br>
+  <hr>
+  <br>
+
+  <% }) %>
+
+
 
   <br>
   <br>
-  <h3>Artikel lain:</h3>
-  <ul>
-    <li><a href="blog/keadilan">Keadilan</a></li>
-    <li><a href="blog/review">Review</a></li>
-  </ul>
+
 
   </div>
 </section>
@@ -58,3 +59,12 @@
 
 
 <%- include("partials/footer"); -%>
+
+
+
+
+<!-- <h3>Artikel lain:</h3>
+<ul>
+  <li><a href="blog/keadilan">Keadilan</a></li>
+  <li><a href="blog/review">Review</a></li>
+</ul>

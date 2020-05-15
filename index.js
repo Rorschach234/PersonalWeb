@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 app.set('view engine', 'ejs');
-mongoose.connect('mongodb://localhost:27017/personalwebsite', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://admin-Hakam:admin23@cluster0-ovfhf.mongodb.net/personalwebsite', {useNewUrlParser: true, useUnifiedTopology: true});
 
 
 var articleTitle = "Keadilan"
@@ -59,35 +59,38 @@ app.get("/blog", function(req, res) {
   Post.find({}, function(err, foundPost){
     console.log(foundPost);
 
-  res.render("blog", {titlePost: foundPost, contentPost: foundPost});
+
+
+
+  res.render("blog", {customPost: foundPost});
   });
 });
 
 
 
-app.get('/blog/:post', function(req, res) {
-
-  const storedTitle = articleTitle.toLowerCase();
-  const storedTitle2 = articleTitle2.toLowerCase();
-
-  if (req.params.post === storedTitle ) {
-    Post.find({}, function(err, foundPost){
-      console.log(foundPost);
-
-    res.render("blog", {titlePost: foundPost, contentPost: foundPost});
-    });
-  } else if(req.params.post === storedTitle2){
-    Post.find({}, function(err, foundPost){
-      console.log(foundPost);
-
-    res.render("blog", {titlePost: foundPost, contentPost: foundPost});
-    });
-}
-  else {
-    res.redirect("/blog");
-  }
-
-});
+  //app.get('/blog/:post', function(req, res) {
+  //
+  //  const storedTitle = articleTitle.toLowerCase();
+  //  const storedTitle2 = articleTitle2.toLowerCase();
+  //
+  //  if (req.params.post === storedTitle ) {
+  //    Post.find({}, function(err, foundPost){
+  //      console.log(foundPost);
+  //
+  //    res.render("blog", {titlePost: foundPost, contentPost: foundPost});
+  //    });
+  //  } else if(req.params.post === storedTitle2){
+  //    Post.find({}, function(err, foundPost){
+  //      console.log(foundPost);
+  //
+  //    res.render("blog", {titlePost: foundPost, contentPost: foundPost});
+  //    });
+  //}
+  //  else {
+  //    res.redirect("/blog");
+  //  }
+  //
+  //});
 
 
 app.get("/gallery", function(req, res) {
@@ -113,6 +116,13 @@ post.save();
 res.redirect("/blog");
 
 });
+
+
+
+
+
+
+
 
 //var topImage = $(".alone1");
 
