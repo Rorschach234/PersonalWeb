@@ -36,11 +36,14 @@
 <section id=content>
   <div class="content">
 <% customPost.forEach(function(post){ %>
-  <h2><%= post.title%></p></h2>
+  <h2><%= post.title%></h2>
 <p class ="test"><%=post.content %></p>
 
 
   <br>
+  <p>Category : <span class = "information"><%=post.category%></span> </p>
+  <p>Date : <span class = "information"><%=post.date%></span> </p>
+
   <hr>
   <br>
 
