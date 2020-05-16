@@ -38,18 +38,19 @@ const postsSchema = new mongoose.Schema({
   title: String,
   content: String,
   category: String,
-  date: String,
+  date: String
 });
 
 const Post = mongoose.model("post", postsSchema);
 
-Post.updateOne({ $set: { category: String }}, function(err, result) {
+//Post.updateOne({ $set: { category: String }}, function(err, result) {
     if(err) throw err;
  });
+//
+// Post.updateOne({ $set: { date: String }}, function(err, result) {
+//     if(err) throw err;
+//  });
 
- Post.updateOne({ $set: { date: String }}, function(err, result) {
-     if(err) throw err;
-  });
 
 
 
@@ -61,9 +62,6 @@ Post.updateOne({ $set: { category: String }}, function(err, result) {
 app.get("/blog", function(req, res) {
   Post.find({}, function(err, foundPost){
     console.log(foundPost);
-
-
-
 
   res.render("blog", {customPost: foundPost});
   });
@@ -104,20 +102,30 @@ app.get("/compose", function(req, res) {
   res.render("compose");
 });
 
+
 app.post("/compose", function(req, res){
+
+  var today = new Date();
+  var option = {
+    weekday: "long",
+    day: "numeric",
+    month: "long"
+  };
+
+  let day = today.toLocaleDateString("en-US", option);
+
 
   const titleNew = req.body.titleCompose;
   const contentNew = req.body.contentCompose;
 const categoryNew = req.body.categoryCompose.toUpperCase().slice(0,1) + req.body.categoryCompose.slice(1);
-const dateNew = req.body.blog;
+const dateNew = day;
 
 
   const post = new Post({
     title: titleNew,
     content: contentNew,
     category:categoryNew,
-    date: dateNew
-
+    date: dateNew,
   });
 
 
