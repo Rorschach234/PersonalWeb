@@ -44,8 +44,8 @@ const postsSchema = new mongoose.Schema({
 const Post = mongoose.model("post", postsSchema);
 
 //Post.updateOne({ $set: { category: String }}, function(err, result) {
-    if(err) throw err;
- });
+  //  if(err) throw err;
+ //});
 //
 // Post.updateOne({ $set: { date: String }}, function(err, result) {
 //     if(err) throw err;
@@ -109,7 +109,8 @@ app.post("/compose", function(req, res){
   var option = {
     weekday: "long",
     day: "numeric",
-    month: "long"
+    month: "long",
+    year: 'numeric'
   };
 
   let day = today.toLocaleDateString("en-US", option);
