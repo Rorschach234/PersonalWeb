@@ -57,7 +57,7 @@ padding-top: 50px}
 
 p{
   margin: 0 auto 0 auto;
-  font-family: serif;
+  line-height: 1.5
 }
 span{
   margin-bottom: 1rem;
@@ -86,10 +86,25 @@ margin-bottom: 30px}
   background-color: #f4f9f4;
 }
 
+.information p{text-align: left;
+font-style: italic;
+font-size: 12px}
+
+#content p{
+  font-family: serif;
+  font-size: 21px;
+  font-family: 'Noto Serif';
+}
+
 @media(max-width: 400px)
 {
   .content{
     margin: 20px 25px 10px 25px;
+  }
+  #content p{
+    font-family: serif;
+    font-size: 21px;
+    font-family: 'Noto Serif';
   }
 }
 
@@ -97,10 +112,17 @@ margin-bottom: 30px}
 
 */
 
-.post{margin-top: 50px;
-margin-left: 200px;
-margin-right: 200px
+.post{
+    margin: 50px 200px 50px 200px;
+  }
+@media(max-width: 400px)
+
+{
+.post{
+    margin: 50px;
+  }
 }
+
 .test{
 white-space: pre-line;
 white-space: pre-wrap
